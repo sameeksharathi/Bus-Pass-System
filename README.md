@@ -1,5 +1,1 @@
 # Full-Stack
-
-# Project
-
-# Dumb🤢
