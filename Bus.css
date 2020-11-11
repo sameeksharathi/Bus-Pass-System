@@ -1,0 +1,96 @@
+#navbarSupportedContent{
+    position: relative;
+    padding-left: 700px;
+}
+.nav-item{
+    color: black;
+}
+.site-blocks-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position: center center; 
+}
+.site-blocks-cover.overlay {
+    position: relative; 
+}
+.site-blocks-cover.overlay:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4); 
+}
+.site-blocks-cover .player {
+    position: absolute;
+    bottom: -250px;
+    width: 100%; 
+}
+.site-blocks-cover, .site-blocks-cover .row {
+    min-height: 600px;
+    height: calc(100vh - 73px); 
+}
+.site-blocks-cover.inner-page-cover, .site-blocks-cover.inner-page-cover .row {
+    min-height: 600px;
+    height: calc(30vh); 
+}
+.site-blocks-cover h1 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.5; 
+}
+
+.mb-5{
+    color: white;
+    font-size: 20px;
+}
+
+.unit-1 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: block; }
+    .unit-1:after {
+      content: "";
+      z-index: 1;
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: -moz-linear-gradient(top, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+      background: -webkit-linear-gradient(top, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+      background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(18%, transparent), color-stop(99%, rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8)));
+      background: -o-linear-gradient(top, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+      background: linear-gradient(to bottom, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 ); }
+    .unit-1 img {
+      -o-object-fit: cover;
+      object-fit: cover;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1); }
+    .unit-1 img, .unit-1 .unit-1-text {
+      -webkit-transition: .3s all ease-in-out;
+      -o-transition: .3s all ease-in-out;
+      transition: .3s all ease-in-out; }
+    .unit-1 .unit-1-text {
+      z-index: 2;
+      position: absolute;
+      bottom: 10px;
+      color: #fff;
+      display: block;
+      width: 100%; }
+      .unit-1 .unit-1-text .unit-1-heading {
+        font-size: 1.2rem;
+        position: relative; }
+    .unit-1:hover .unit-1-text {
+      bottom: 30px; }
+    .unit-1:hover img {
+      -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05); }
