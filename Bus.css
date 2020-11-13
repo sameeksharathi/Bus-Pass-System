@@ -12,7 +12,9 @@
     align-items: center;
     color: black;
 }
-
+.nav-link{
+    font-size: 20px;
+}
 .heading{
   font-family: 'Rancho', cursive;
   font-size:55px;
