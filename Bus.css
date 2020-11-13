@@ -19,8 +19,14 @@
   font-family: 'Rancho', cursive;
   font-size:55px;
   margin-top: 110px;
-  margin-bottom: 70px;
   text-align: center;
+  color: black;
+}
+.subheading{
+    text-align: center;
+    color: black;
+    margin-bottom: 70px;
+    opacity: 0.7;
 }
 .site-blocks-cover {
     background-size: cover;
