@@ -1,3 +1,8 @@
+*{
+    padding:0;
+    box-sizing: border-box;
+    margin: 0;
+}
 .navbar-brand{
   display: flex;
   justify-content: center;
@@ -10,24 +15,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    /* color: black; */
 }
+
 .nav-link{
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    /* opacity: 1; */
 }
+
+.nav-link.scrolled {
+    color:black !important;
+    transition: color 1s linear;
+}
+.navbar.scrolled{
+    background-color: white !important;
+    transition: background-color 1s linear;
+}
+
 .heading{
   font-family: 'Rancho', cursive;
   font-size:55px;
-  margin-top: 110px;
+  margin-top: 80px;
   text-align: center;
   color: black;
 }
 .subheading{
     text-align: center;
     color: black;
-    margin-bottom: 70px;
+    margin-bottom: 80px;
     opacity: 0.7;
 }
+
 .site-blocks-cover {
     background-size: cover;
     background-repeat: no-repeat;
@@ -66,6 +86,7 @@
     color: #fff;
     line-height: 1.5; 
 }
+
 
 .mb-5{
     color: white;

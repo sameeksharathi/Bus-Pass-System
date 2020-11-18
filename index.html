@@ -14,21 +14,22 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+    <nav class="navbar navbar-dark navbar-expand-xl fixed-top"
+        style="background-color: rgba(32, 31, 31, 0); width: 100%;">
         <a class="navbar-brand" href="#"><img
                 src="https://fontmeme.com/permalink/201111/84c7c96adf6c1e34b42a0484503ef01b.png" alt="calligraphy-fonts"
                 border="0"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLinks"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navLinks">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ">
                     <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item">
@@ -61,37 +62,13 @@
 
     </div>
 
-    <div class="site-section">
-        <h1 class="heading" style="margin-bottom: 80px;">TEAM</h1>
-        <div class="container overlap-section">
-            <div class="row">
-                <div class="col-md-6 col-lg-6 mb-6 mb-lg-0">
-                    <a href="#" class="unit-1 text-center">
-                        <img src="images/img1.jpg" alt="Image" class="img-fluid" style="height: 353px">
-                        <div class="unit-1-text">
-                            <h3 class="unit-1-heading">Riya Gaur</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-6 mb-6 mb-lg-0">
-                    <a href="#" class="unit-1 text-center">
-                        <img src="images/img2.jpeg" alt="Image" class="img-fluid" style="height: 353px">
-                        <div class="unit-1-text">
-                            <h3 class="unit-1-heading">Sameeksha Rathi</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
 
-    </div>
-
-    <div class="site-section">
+    <div class="site-section p-0">
 
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-7 text-center">
-                    <h1 class="heading margin-bottom: 70px">Our Destinations</h1>
+                    <h1 class="heading margin-bottom: 80px">Our Destinations</h1>
                     <p class="subheading">Choose Your Next Destination</p>
                 </div>
             </div>
@@ -147,11 +124,10 @@
                 </div>
             </div>
         </div>
-
     </div>
 
 
-    <div class="site-section border-top">
+    <div class="site-section p-0 mt-5">
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
@@ -161,6 +137,40 @@
             </div>
         </div>
     </div>
+
+
+    <div class="site-section">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 text-center">
+                <h1 class="heading" style="margin-bottom: 80px;">TEAM</h1>
+            </div>
+        </div>
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-6 col-lg-6 mb-6 mb-lg-0">
+                    <a href="#" class="unit-1 text-center">
+                        <img src="images/img1.jpg" alt="Image" class="img-fluid" style="height: 353px">
+                        <div class="unit-1-text">
+                            <h3 class="unit-1-heading">Riya Gaur</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-6 mb-6 mb-lg-0">
+                    <a href="#" class="unit-1 text-center">
+                        <img src="images/img2.jpeg" alt="Image" class="img-fluid" style="height: 353px">
+                        <div class="unit-1-text">
+                            <h3 class="unit-1-heading">Sameeksha Rathi</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
 
     <footer class="site-footer">
         <div class="container">
@@ -215,6 +225,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <script src="bus.js"></script>
 </body>
 
 </html>
