@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 
 <body>
@@ -19,14 +20,13 @@
             }
             else {
                 var doc = new jsPDF();
+                doc.setTextColor(0, 255, 0);
+                doc.setFontSize(34);
+                doc.text("Name=" + document.getElementById("name").value, 10, 10);
+                doc.setTextColor(255, 0, 0);
+                doc.setFontSize(38);
+                doc.text("Country=" + document.getElementById("country").value, 10, 50);
 
-                doc.text("name=" + document.getElementById("name").value, 10, 10);
-                doc.text("country=" + document.getElementById("country").value, 10, 20);
-
-
-                // FOOTER
-                doc.setTextColor(100);
-                doc.setFontSize(10);
                 doc.save("output.pdf");
             }
         }
