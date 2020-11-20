@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="name" placeholder="Name">
+    <input type="text" id="country" placeholder="Country">
+    <button onclick="createPDF()">Submit</button>
+
+    <script>
+        function createPDF() {
+            if (document.getElementById("name").value == "" || document.getElementById("country").value == "") {
+                alert("Please enter all the fields");
+            }
+            else {
+                var doc = new jsPDF();
+
+                doc.text("name=" + document.getElementById("name").value, 10, 10);
+                doc.text("country=" + document.getElementById("country").value, 10, 20);
+
+
+                // FOOTER
+                doc.setTextColor(100);
+                doc.setFontSize(10);
+                doc.save("output.pdf");
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+
+</body>
+
+</html>
