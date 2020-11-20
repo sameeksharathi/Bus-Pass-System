@@ -20,12 +20,12 @@
             }
             else {
                 var doc = new jsPDF();
-                doc.setTextColor(0, 255, 0);
-                doc.setFontSize(34);
-                doc.text("Name=" + document.getElementById("name").value, 10, 10);
-                doc.setTextColor(255, 0, 0);
-                doc.setFontSize(38);
-                doc.text("Country=" + document.getElementById("country").value, 10, 50);
+                doc.setTextColor(0, 0, 0);
+                doc.setFontSize(20);
+                doc.text("Name: " + document.getElementById("name").value, 50, 10);
+                doc.setTextColor(0, 0, 0);
+                doc.setFontSize(20);
+                doc.text("Country: " + document.getElementById("country").value, 50, 18);
 
                 doc.save("output.pdf");
             }
