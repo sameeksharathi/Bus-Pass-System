@@ -1,3 +1,11 @@
+.content{
+    padding:100px auto;
+}
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0);
+}
+
 .navbar.scrolled{
     background-color: white !important;
     transition: background-color 1s linear;

@@ -13,9 +13,7 @@ html, body{
   justify-content: center;
   align-items: center;
 }
-.navbar{
-  background-color: rgba(255, 255, 255);
-}
+
 .navbar-collapse{
     display: flex;
     /* justify-content: center; */
@@ -155,12 +153,15 @@ html, body{
       transform: scale(1.05); 
 }
 
-.text-center{
+.main{
      padding-top: 60px;
      margin-top: 30px;
 }
 
 
+.book{
+    margin: 80px auto ;
+}
 
 @media(max-width:768px){
     .margin{
