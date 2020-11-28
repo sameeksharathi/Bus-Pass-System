@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: darkcyan;
+            font-family: 'Open Sans', sans-serif;
+            /* height: 100vh; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #fff;
+            width: 1000px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 50px;
+            margin-bottom: 100px;
+            border: 2px solid lightgrey;
+            box-shadow: lightslategray;
+
+        }
+
+        .header {
+            background-color: lightgrey;
+        }
+
+        .header h2 {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form {
+            padding: 20px 30px;
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+
+        .form-control label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-control input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            outline: none;
+            border: 2px solid #f0f0f0;
+        }
+
+        .form-control i {
+            position: absolute;
+            visibility: hidden;
+            right: 10px;
+            top: 40px;
+        }
+
+        .form-control small {
+            position: absolute;
+            left: 0;
+            margin-top: 2px;
+            visibility: hidden;
+        }
+
+        button {
+            display: inline-block;
+            width: 30%;
+            background-color: darkslateblue;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            outline: none;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .button {
+            text-align: center;
+        }
+
+        .form-control.success input {
+            border-color: green;
+        }
+
+        .form-control.error input {
+            border-color: red;
+        }
+
+        .form-control.success .fa-check-circle {
+            visibility: visible;
+            color: green;
+        }
+
+        .form-control.error .fa-exclamation-circle {
+            visibility: visible;
+            color: red;
+        }
+
+
+        .form-control.error small {
+            visibility: visible;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Grab Your seat</h2>
+        </div>
+        <form class="form" id="form">
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter Your Name">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small></small>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter Your Email">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small></small>
+            </div>
+
+            <div class="form-control">
+                <label for="mob">Mobile Number</label>
+                <input type="text" id="mob" placeholder="Enter Mobile Number">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+
+            <div class="form-control">
+                <label for="expdate">Valid Till</label>
+                <input type="date" id="expdate">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+
+            <div class="form-control">
+                <label for="destination">Destination</label>
+                <select id="destination" name="destination"
+                    style="display: block; width: 100%; padding: 10px; border-radius: 5px; outline: none; border: 2px solid #f0f0f0;">
+                    <option value="Choose Your Destination">Choose Your Destination</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mathura">Mathura</option>
+                    <option value="Vrindavan">Vrindavan</option>
+                    <option value="Barsana">Barsana</option>
+                    <option value="Chaumuhan">Chaumuhan</option>
+                </select>
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+            <div class="button">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        const form = document.getElementById('form');
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const mob = document.getElementById('mob');
+        const destination = document.getElementById('destination');
+        const small = document.querySelector('small');
+
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            checkInput();
+        })
+
+        function checkInput() {
+            const nameValue = name.value.trim();
+            const emailValue = email.value.trim();
+            const mobValue = mob.value.trim();
+            const expdateValue = expdate.value.trim();
+            const destinationValue = destination.value.trim();
+
+            if (nameValue === '') {
+                showError(name, "name can not be Blank");
+            }
+            else if (!isname(nameValue)) {
+                showError(name, "name is not valid")
+            }
+            else {
+                showSuccess(name);
+            }
+
+
+            if (emailValue === '') {
+                showError(email, "Email can not be Blank");
+            }
+            else if (!isEmailValid(emailValue)) {
+                showError(email, "Email Id is not valid")
+            }
+            else {
+                showSuccess(email);
+            }
+
+
+            if (mobValue === '') {
+                showError(mob, "Mobile Number can not be Blank");
+            }
+            else if (!ismob(mobValue)) {
+                showError(mob, "Mobile Number is not valid")
+            }
+            else {
+                showSuccess(mob);
+            }
+
+            if (expdateValue === '') {
+                showError(expdate, "Expiry Date can not be Blank");
+            }
+            else {
+                showSuccess(expdate);
+            }
+
+            if (destinationValue === 'Choose Your Destination') {
+                destination.style.border = "2px solid red";
+                showError(destination, "Destination can not be Blank");
+            }
+            else {
+                destination.style.border = "2px solid green";
+                showSuccess(destination);
+            }
+        }
+
+        function showError(input, msg) {
+            const formControl = input.parentNode;
+            formControl.className = 'form-control error';
+            const small = formControl.querySelector('small');
+            small.innerHTML = msg;
+        }
+
+        function showSuccess(input) {
+            const formControl = input.parentNode;
+            formControl.className = 'form-control success';
+        }
+
+        function isEmailValid(email) {
+            return /^[a-zA-Z\-]+[a-zA-Z0-9.-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,3}$/.test(email);
+        }
+
+        function isname(name) {
+            return /^[a-zA-Z \-]+$/.test(name);
+        }
+
+        function ismob(mob) {
+            return /^[6-9]\d{9}$/.test(mob);
+        }
+    </script>
+</body>
+
+</html>
