@@ -176,3 +176,16 @@ hr{
     /* background: #273035; */
     background: linear-gradient(to right, #273035, #273035e3, #2730357c);
 }
+
+.bus {
+    /* Some layout code… */
+    animation: xAxis 5s infinite ease-in;
+  }
+
+@keyframes xAxis {
+    100% {
+      animation-timing-function: ease-in;
+      transform: translateX(1450px);
+    }
+  }
+  
