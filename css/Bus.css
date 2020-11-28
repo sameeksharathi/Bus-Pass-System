@@ -41,7 +41,7 @@ html, body{
 }
 
 .heading{
-  font-family: 'Rancho', cursive;
+  /* font-family: 'Rancho', cursive; */
   font-size:55px;
   margin-top: 80px;
   /* text-align: center; */
@@ -170,16 +170,15 @@ html, body{
 }
 
 hr{
-    width: 50%;
+    width: 80%;
     border: 0;
-    height: 2px;
     /* background: #273035; */
     background: linear-gradient(to right, #273035, #273035e3, #2730357c);
 }
 
 .hr-travel{
     width:25%;
-    height: 0.5px;
+    height: 1px;
     /* background: #273035; */
     background: linear-gradient(to right, #f8f8f800, #000000e3, #ffffff00);
     margin-top: 0;
