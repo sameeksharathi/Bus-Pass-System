@@ -6,7 +6,9 @@
 html, body{
     overflow-x: hidden;
 }
-
+.navbar{
+    background-color: #fff;
+}
 
 .navbar-brand{
   display: flex;
