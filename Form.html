@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation</title>
+    <title>Manage Pass</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         @import url(http://fonts.googleapis.com/css?family=Open+Sans);
@@ -179,9 +179,11 @@
                 <small>Error msg</small>
             </div>
             <div class="button">
-                <button type="submit">Submit</button>
+                <button type="submit" onclick="createPDF()">Submit</button>
             </div>
         </form>
+
+
     </div>
 
 
@@ -207,10 +209,10 @@
             const destinationValue = destination.value.trim();
 
             if (nameValue === '') {
-                showError(name, "name can not be Blank");
+                showError(name, "Name can not be Blank");
             }
             else if (!isname(nameValue)) {
-                showError(name, "name is not valid")
+                showError(name, "Name is not valid")
             }
             else {
                 showSuccess(name);
@@ -280,7 +282,42 @@
             return /^[6-9]\d{9}$/.test(mob);
         }
 
+
+        function createPDF() {
+            // if (document.getElementById("name").value == "" || document.getElementById("email").value == "") {
+            //     alert("Please enter all the fields");
+            // }
+            // else {
+            var doc = new jsPDF('l', 'mm', [610, 310]);
+            doc.setFontType('bold');
+            doc.text("Bus Pass", 90, 10);
+            doc.line(89, 12, 115, 12);
+            doc.setTextColor(0, 0, 0);
+            doc.setFontSize(15);
+            doc.setFont("times");
+            doc.setFontType('normal');
+            doc.text("Name: " + document.getElementById("name").value, 30, 30);
+            doc.text("Email: " + document.getElementById("email").value, 30, 40);
+            doc.text("Mobile Number: " + document.getElementById("mob").value, 30, 50);
+            doc.text("Valid Till: " + document.getElementById("expdate").value, 30, 60);
+            doc.text("Destination: " + document.getElementById("destination").value, 30, 70);
+            doc.setTextColor(0, 0, 125);
+            doc.setFontSize(25);
+            doc.setFont("courier");
+            doc.setFontType("bold");
+            doc.text("Enjoy Your Journey", 65, 100);
+
+
+
+            doc.save("output.pdf");
+            // }
+        }
+
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+
+
 </body>
 
 </html>
