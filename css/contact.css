@@ -1,0 +1,4 @@
+.navbar.scrolled{
+    background-color: white !important;
+    transition: background-color 1s linear;
+}
