@@ -6,9 +6,7 @@
 html, body{
     overflow-x: hidden;
 }
-.navbar{
-    background-color: #fff;
-}
+
 
 .navbar-brand{
   display: flex;
@@ -46,11 +44,11 @@ html, body{
   font-family: 'Rancho', cursive;
   font-size:55px;
   margin-top: 80px;
-  text-align: center;
+  /* text-align: center; */
   color: black;
 }
 .subheading{
-    text-align: center;
+    /* text-align: center; */
     color: black;
     margin-bottom: 80px;
     opacity: 0.7;
@@ -157,7 +155,7 @@ html, body{
 
 .main{
      padding-top: 60px;
-     margin-top: 30px;
+     margin-top: 54px;
 }
 
 
@@ -169,4 +167,12 @@ html, body{
     .margin{
         margin-left: 0;
     }
+}
+
+hr{
+    width: 50%;
+    border: 0;
+    height: 2px;
+    /* background: #273035; */
+    background: linear-gradient(to right, #273035, #273035e3, #2730357c);
 }

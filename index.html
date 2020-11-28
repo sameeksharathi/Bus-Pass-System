@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="css/Bus.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
+
     <!-- <div class="header">
         <a class="navbar-brand" href="#"><img
             src="https://fontmeme.com/permalink/201111/84c7c96adf6c1e34b42a0484503ef01b.png" alt="calligraphy-fonts"
@@ -41,7 +43,7 @@
         </div>
     </div> -->
 
-    <nav class="navbar navbar-light navbar-expand-xl fixed-top" style=" width: 100%; ">
+    <nav class="navbar navbar-light navbar-expand-xl fixed-top" style=" width: 100%; background-color: #fff; ">
         <a class="navbar-brand" href="#"><img src = "images/logo.png" alt="calligraphy-fonts"
                 border="0" style="max-width: 70px; padding-left: 10px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLinks"
@@ -88,14 +90,23 @@
 
     </div>
 
+    <div class="scroll-animations">
+        <div class="animated">
+          <span>☎</span>
+          <h3>Number One</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis lacinia est. Nulla malesuada massa orci, vitae placerat lorem pharetra a.</p>
+        </div>
+    </div>
+    
 
     <div class="site-section p-0">
 
         <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-7 text-center">
-                    <h1 class="heading margin-bottom: 80px">Our Destinations</h1>
-                    <p class="subheading">Choose Your Next Destination</p>
+            <div class="row mb-5">
+                <div class="col-md-7">
+                    <h1 class="heading margin-bottom: 80px animate__animated animate__bounceOutRight animate_delay animate__repeat-3">Our Destinations</h1>
+                    <hr>
+                    <p class="subheading">Choose Your Next Destination <img class="ml-1 animate__animated animate__bounceOutRight animate_delay-60s animate__repeat-10" src ="images/travel.png" style="max-width: 90px;"></p>
                 </div>
             </div>
             <div class="row">
@@ -157,9 +168,11 @@
 
 
     <div class="site-section">
-        <div class="row justify-content-center mb-5">
-            <div class="col-md-7 text-center">
-                <h1 class="heading" style="margin-bottom: 80px;">TEAM</h1>
+        <div class="container">
+        <div class="row  mb-5">
+            <div class="col-md-7 " style="margin-bottom: 80px;">
+                <h1 class="heading">TEAM</h1>
+                <hr>
             </div>
         </div>
         <div class="container ">
@@ -182,7 +195,7 @@
                 </div>
             </div>
         </div>
-
+    </div>
     </div>
 
 
@@ -238,6 +251,7 @@
             </div>
         </div>
     </footer>
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
