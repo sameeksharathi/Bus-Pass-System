@@ -177,6 +177,16 @@ hr{
     background: linear-gradient(to right, #273035, #273035e3, #2730357c);
 }
 
+.hr-travel{
+    width:25%;
+    height: 0.5px;
+    /* background: #273035; */
+    background: linear-gradient(to right, #f8f8f800, #000000e3, #ffffff00);
+    margin-top: 0;
+    margin-bottom: 40px;
+    margin-left: 38%;
+}
+
 .bus {
     /* Some layout code… */
     animation: xAxis 5s infinite ease-in;
@@ -189,7 +199,7 @@ hr{
     }
   }
 
-  p{
+p{
     color:gray;
     Font-size: 16px;
     transition: 0.4s;
