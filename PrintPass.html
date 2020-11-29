@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Pass</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="textarea" id="my-first">
+
+        </div>
+
+    </div>
+
+
+    <script>
+        // Create a new element
+        let divElem = document.createElement('div');
+
+        // Add text to that created element
+        let val = localStorage.getItem('Payment');
+        let text;
+        if (val == null) {
+            text = document.createTextNode('This is my element. click to edit it');
+        }
+        else {
+            text = document.createTextNode(val);
+        }
+        divElem.appendChild(text);
+
+        // Give element id, style and class
+        // divElem.setAttribute('id', 'elem');
+        // divElem.setAttribute('class', 'elem');
+        // divElem.setAttribute('style', 'border:2px solid black; width: 154px; margin: 34px; padding:23px; margin-left: 500px;');
+
+        // Grab the main container
+        let container = document.querySelector('.container');
+        let first = document.getElementById('my-first');
+
+
+        // Insert the element before element with id first
+        container.insertBefore(divElem, first);
+
+        console.log(divElem, container, first)
+
+        // add event listener to the divElem
+        divElem.addEventListener('click', function () {
+            let noTextAreas = document.getElementsByClassName('textarea').length;
+            if (noTextAreas == 0) {
+                let html = elem.innerHTML;
+                divElem.innerHTML = ` <textarea class="textarea form-control" id="textarea" rows="3"> ${html}</textarea>`;
+            }
+            //listen for the blur event on textarea
+            let textarea = document.getElementById('textarea');
+            textarea.addEventListener('blur', function () {
+                elem.innerHTML = textarea.value;
+                localStorage.setItem('text', textarea.value);
+            })
+        });
+
+    </script>
+</body>
+
+</html>
