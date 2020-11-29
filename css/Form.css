@@ -32,13 +32,13 @@
             margin-top: 55px;
             margin-bottom: 60px;
             margin-left: 16%;
-            border: 2px solid lightgrey;
             box-shadow: lightslategray;
 
         }
 
         .header {
-            background-color: lightgray;
+            background-color: black;
+            color: white;
         }
 
         .header h2 {
