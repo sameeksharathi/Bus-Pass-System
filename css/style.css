@@ -18,7 +18,8 @@ body {
     -o-transition: .3s all ease;
     transition: .3s all ease; }
     a:hover {
-      text-decoration: none; }
+    text-decoration: none; 
+  }
   
   h1, h2, h3, h4, h5,
   .h1, .h2, .h3, .h4, .h5 {
