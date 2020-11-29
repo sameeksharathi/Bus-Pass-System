@@ -61,24 +61,30 @@ function createPDF() {
 //     doc.autoTable({ html: '#receipt' });
 //     doc.save('table.pdf');
 // }
+// var doc = new jsPDF('p', 'pt');
+// var res = doc.autoTableHtmlToJson(document.getElementById('table'));
+// console.log(res.columns);
 
 document.getElementById('pdf').onclick = function () {
-    var doc = new jsPDF('p', 'pt');
+    var doc = new jsPDF('l', 'pt', [610, 310]);
     var res = doc.autoTableHtmlToJson(document.getElementById('table'));
     var height = doc.internal.pageSize.height;
-    doc.text("Generated PDF", 50, 50);
+    doc.setFontType('bold');
+    doc.text("Pass Receipt", 210, 30);
+    doc.line(210, 35, 310, 35);
+    doc.setFontType('normal');
     doc.autoTable(res.columns, res.data, {
-        startY: 200
+        startY: 50
     });
-    doc.autoTable(res.columns, res.data, {
-        startY: doc.autoTableEndPosY() + 50
-    });
-    doc.autoTable(res.columns, res.data, {
-        startY: height,
-        afterPageContent: function (data) {
-            doc.setFontSize(20)
-            doc.text("After page content", 50, height - data.settings.margin.bottom - 20);
-        }
-    });
+    // doc.autoTable(res.columns, res.data, {
+    //     startY: doc.autoTableEndPosY() + 50
+    // });
+    // doc.autoTable(res.columns, res.data, {
+    //     startY: height,
+    //     afterPageContent: function (data) {
+    //         doc.setFontSize(20)
+    //         doc.text("After page content", 50, height - data.settings.margin.bottom - 20);
+    //     }
+    // });
     doc.save('Generated PDF.pdf');
 };
