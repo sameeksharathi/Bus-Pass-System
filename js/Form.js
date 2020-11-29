@@ -53,11 +53,13 @@ function checkInput() {
         localStorage.setItem('mobno', mob.value)
     }
 
-    if (expdateValue === '') {
-        showError(expdate, "Expiry Date can not be Blank");
+    if (expdateValue === '0') {
+        expdate.style.border = "2px solid red";
+        showError(expdate, "Month can not be 0");
     }
 
     else {
+        expdate.style.border = "2px solid green";
         showSuccess(expdate);
         localStorage.setItem('Expire', expdate.value)
         var pay = Number(expdate.value)
