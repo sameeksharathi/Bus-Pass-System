@@ -15,8 +15,8 @@ function checkInput() {
     const nameValue = name.value.trim();
     const emailValue = email.value.trim();
     const mobValue = mob.value.trim();
-    const expdateValue = expdate.value.trim();
-    const destinationValue = destination.value.trim();
+    const expdateValue = expdate.value;
+    const destinationValue = destination.value;
 
     if (nameValue === '') {
         showError(name, "Name can not be Blank");
