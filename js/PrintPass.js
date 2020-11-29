@@ -51,9 +51,34 @@ function createPDF() {
 }
 
 
-function pdf() {
-    let doc = new jsPDF()
+// function pdf() {
+//     // let doc = new jsPDF()
 
-    doc.autoTable({ html: '#receipt' })
-    doc.save('  Receipt.pdf')
-}
+//     // doc.autoTable({ html: '#receipt' })
+//     // doc.save('  Receipt.pdf')
+
+//     var doc = new jsPDF();
+//     doc.autoTable({ html: '#receipt' });
+//     doc.save('table.pdf');
+// }
+
+document.getElementById('pdf').onclick = function () {
+    var doc = new jsPDF('p', 'pt');
+    var res = doc.autoTableHtmlToJson(document.getElementById('table'));
+    var height = doc.internal.pageSize.height;
+    doc.text("Generated PDF", 50, 50);
+    doc.autoTable(res.columns, res.data, {
+        startY: 200
+    });
+    doc.autoTable(res.columns, res.data, {
+        startY: doc.autoTableEndPosY() + 50
+    });
+    doc.autoTable(res.columns, res.data, {
+        startY: height,
+        afterPageContent: function (data) {
+            doc.setFontSize(20)
+            doc.text("After page content", 50, height - data.settings.margin.bottom - 20);
+        }
+    });
+    doc.save('Generated PDF.pdf');
+};

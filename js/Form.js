@@ -163,26 +163,22 @@ function ismob(mob) {
 // }
 
 
-function isValid() {
-    var array = ['name', 'email', 'mob', 'expdate', 'destination']
 
-    for (el of array) {
-        console.log(el)
-        let formControl = el.parentNode;
-        if (formControl.className == 'form-control success') {
-            return true;
-        }
-        else {
-            return false;
-        }
+
+
+function validateMyForm() {
+    if (!((name.parentNode.className == 'form-control success') && (email.parentNode.className == 'form-control success') && (mob.parentNode.className == 'form-control success') && (destination.parentNode.className == 'form-control success'))) {
+        returnToPreviousPage();
+        return false;
     }
+
+
+    return true;
 }
 
+
 function Proceed() {
-    if (isValid) {
+    if (validateMyForm()) {
         location.href = "Payment.html";
-    }
-    else {
-        location.href = "Form.html";
     }
 }

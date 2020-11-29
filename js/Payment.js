@@ -117,3 +117,22 @@ var pay = document.getElementById("payment")
 var money = localStorage.getItem('Payment')
 
 pay.innerHTML = "Rs " + money + "/-";
+
+
+
+function validateMyForm() {
+    if (!((name.parentNode.className == 'form-control success') && (num.parentNode.className == 'form-control success') && (expdate.parentNode.className == 'form-control success') && (cvv.parentNode.className == 'form-control success'))) {
+        returnToPreviousPage();
+        return false;
+    }
+
+
+    return true;
+}
+
+
+function Proceed() {
+    if (validateMyForm()) {
+        location.href = "PrintPass.html";
+    }
+}
