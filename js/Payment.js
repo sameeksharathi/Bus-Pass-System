@@ -26,7 +26,6 @@ function checkInput() {
     }
     else {
         showSuccess(name);
-        localStorage.setItem('Name', name.value)
     }
 
 
@@ -38,7 +37,6 @@ function checkInput() {
     }
     else {
         showSuccess(email);
-        localStorage.setItem('email', email.value)
     }
 
 
@@ -50,7 +48,6 @@ function checkInput() {
     }
     else {
         showSuccess(mob);
-        localStorage.setItem('mobno', mob.value)
     }
 
     if (expdateValue === '') {
@@ -59,8 +56,6 @@ function checkInput() {
 
     else {
         showSuccess(expdate);
-        localStorage.setItem('Expire', expdate.value)
-        var pay = Number(expdate.value)
     }
 
     if (destinationValue === 'Choose Your Destination') {
@@ -70,33 +65,6 @@ function checkInput() {
     else {
         destination.style.border = "2px solid green";
         showSuccess(destination);
-        localStorage.setItem('Destination', destination.value)
-        let dest = destination.value
-        let payment;
-        if (dest == "Delhi") {
-            payment = Number(150) * pay
-            localStorage.setItem("Payment", payment)
-        }
-        else if (dest == "Agra") {
-            payment = Number(100) * pay
-            localStorage.setItem("Payment", payment)
-        }
-        else if (dest == "Mathura") {
-            payment = Number(60) * pay
-            localStorage.setItem("Payment", payment)
-        }
-        else if (dest == "Vrindavan") {
-            payment = Number(40) * pay
-            localStorage.setItem("Payment", payment)
-        }
-        else if (dest == "Barsana") {
-            payment = Number(80) * pay
-            localStorage.setItem("Payment", payment)
-        }
-        else if (dest == "Chaumuhan") {
-            payment = Number(20) * pay
-            localStorage.setItem("Payment", payment)
-        }
     }
 }
 
@@ -141,7 +109,7 @@ function createPDF() {
     doc.text("Name: " + document.getElementById("name").value, 30, 30);
     doc.text("Email: " + document.getElementById("email").value, 30, 40);
     doc.text("Mobile Number: " + document.getElementById("mob").value, 30, 50);
-    doc.text("Valid Till: " + document.getElementById("expdate").value + " Month/Months", 30, 60);
+    doc.text("Valid Till: " + document.getElementById("expdate").value, 30, 60);
     doc.text("Destination: " + document.getElementById("destination").value, 30, 70);
     doc.setTextColor(0, 0, 125);
     doc.setFontSize(25);
@@ -154,5 +122,3 @@ function createPDF() {
     doc.save("output.pdf");
     // }
 }
-
-
