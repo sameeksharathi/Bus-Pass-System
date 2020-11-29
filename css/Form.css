@@ -26,12 +26,13 @@
         .container {
             /* z-index: 2; */
             background-color: #fff;
-            width: 1000px;
+            /* width: 1000px; */
+            height: 100vh;
             border-radius: 5px;
             overflow: hidden;
-            margin-top: 3px;
+            /* margin-top: 3px;
             margin-bottom: 53px;
-            margin-left: 16%;
+            margin-left: 16%; */
             box-shadow: lightslategray;
 
         }
@@ -87,7 +88,7 @@
         button {
             display: inline-block;
             width: 30%;
-            background-color: rgb(73, 70, 70);
+            background-color:black;
             color: white;
             text-align: center;
             padding: 15px;

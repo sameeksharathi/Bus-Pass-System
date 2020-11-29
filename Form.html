@@ -7,6 +7,8 @@
     <title>Manage Pass</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/Form.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="css/bus.css"> -->
 </head>
 
@@ -16,14 +18,14 @@
     </div> -->
 
     <div class="site-blocks-cover"
-        style="background-image: url(https://guidetoiceland.imgix.net/469993/x/0/.jpg?auto=format%2Ccompress&fit=crop&crop=faces%2Cedges%2Ccenter&ixlib=react-8.6.4&h=610&q=35&dpr=1); height: 764px; width: 1519px"
+        style="background-image: url(https://guidetoiceland.imgix.net/469993/x/0/.jpg?auto=format%2Ccompress&fit=crop&crop=faces%2Cedges%2Ccenter&ixlib=react-8.6.4&h=610&q=35&dpr=1); height: 764px; width: 100vw"
         data-aos="fade" data-stellar-background-ratio="0.5">
         <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="calligraphy-fonts" border="0"
                 style="width: 70px; padding-left: 10px; padding-top: 10px;"></a>
 
         <div class="container">
-            <div class="row justify-align-center align-items-center">
-                <div class="col-md-12">
+            <div class="row-lg-12 row-md-12 row-sm-12 justify-align-center align-items-center">
+                <div>
                     <div class="header">
                         <h2>MANAGE PASS</h2>
                     </div>
@@ -52,9 +54,23 @@
                             <small>Error msg</small>
                         </div>
 
-                        <div class="form-control">
+                        <!-- <div class="form-control">
                             <label for="expdate">Valid Till</label>
                             <input type="date" id="expdate">
+                            <i class="fa fa-check-circle"></i>
+                            <i class="fa fa-exclamation-circle"></i>
+                            <small>Error msg</small>
+                        </div> -->
+
+                        <div class="form-control">
+                            <label for="expdate">Valid till(Months)</label>
+                            <select id="expdate" name="expdate"
+                                style="display: block; width: 100%; padding: 10px; border-radius: 5px; outline: none; border: 2px solid #f0f0f0;">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
                             <i class="fa fa-check-circle"></i>
                             <i class="fa fa-exclamation-circle"></i>
                             <small>Error msg</small>

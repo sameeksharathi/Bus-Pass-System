@@ -50,11 +50,13 @@ function checkInput() {
         showSuccess(mob);
     }
 
-    if (expdateValue === '') {
-        showError(expdate, "Expiry Date can not be Blank");
+    if (expdateValue === '0') {
+        expdate.style.border = "2px solid red";
+        showError(expdate, "Month can not be 0");
     }
 
     else {
+        expdate.style.border = "2px solid green";
         showSuccess(expdate);
     }
 
