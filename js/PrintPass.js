@@ -11,6 +11,7 @@ mob.innerHTML = localStorage.getItem('mobno')
 destination.innerHTML = localStorage.getItem('Destination')
 payment.innerHTML = "Rs " + localStorage.getItem('Payment') + "/-"
 
+
 var valid = localStorage.getItem('Expire')
 if (valid == 1) {
     validity.innerHTML = localStorage.getItem('Expire') + " Month"
@@ -20,46 +21,42 @@ else {
 }
 
 
-function createPDF() {
-    // if (document.getElementById("name").value == "" || document.getElementById("email").value == "") {
-    //     alert("Please enter all the fields");
-    // }
-    // else {
-    var doc = new jsPDF('l', 'mm', [610, 310]);
-    doc.setFontType('bold');
-    doc.text("Bus Pass", 90, 10);
-    doc.line(90, 12, 116, 12);
-    doc.setTextColor(0, 0, 0);
-    doc.setFontSize(15);
-    doc.setFont("times");
-    doc.setFontType('normal');
-    doc.text("Name: " + localStorage.getItem('Name'), 30, 30);
-    doc.text("Email: " + localStorage.getItem('email'), 30, 40);
-    doc.text("Mobile Number: " + localStorage.getItem('mobno'), 30, 50);
-    doc.text("Valid Till: " + localStorage.getItem('Expire'), 30, 60);
-    doc.text("Destination: " + localStorage.getItem('Destination'), 30, 70);
-    doc.text("Payment: " + localStorage.getItem('Payment'), 30, 80);
-    doc.setTextColor(0, 0, 125);
-    doc.setFontSize(25);
-    doc.setFont("Poppins");
-    doc.setFontType("bold");
-    doc.text("Enjoy Your Journey", 65, 100);
+
+// function createPDF() {
+//     // if (document.getElementById("name").value == "" || document.getElementById("email").value == "") {
+//     //     alert("Please enter all the fields");
+//     // }
+//     // else {
+//     var doc = new jsPDF('l', 'mm', [610, 310]);
+//     doc.setFontType('bold');
+//     doc.text("Bus Pass", 90, 10);
+//     doc.line(90, 12, 116, 12);
+//     doc.setTextColor(0, 0, 0);
+//     doc.setFontSize(15);
+//     doc.setFont("times");
+//     doc.setFontType('normal');
+//     doc.text("Name: " + localStorage.getItem('Name'), 30, 30);
+//     doc.text("Email: " + localStorage.getItem('email'), 30, 40);
+//     doc.text("Mobile Number: " + localStorage.getItem('mobno'), 30, 50);
+//     doc.text("Valid Till: " + localStorage.getItem('Expire'), 30, 60);
+//     doc.text("Destination: " + localStorage.getItem('Destination'), 30, 70);
+//     doc.text("Payment: " + localStorage.getItem('Payment'), 30, 80);
+//     doc.setTextColor(0, 0, 125);
+//     doc.setFontSize(25);
+//     doc.setFont("Poppins");
+//     doc.setFontType("bold");
+//     doc.text("Enjoy Your Journey", 65, 100);
 
 
-    doc.save("Receipt.pdf");
-    // }
-}
+//     doc.save("Receipt.pdf");
+//     // }
+// }
 
 
 // function pdf() {
-//     // let doc = new jsPDF()
-
-//     // doc.autoTable({ html: '#receipt' })
-//     // doc.save('  Receipt.pdf')
-
-//     var doc = new jsPDF();
-//     doc.autoTable({ html: '#receipt' });
-//     doc.save('table.pdf');
+//     let doc = new jsPDF()
+//     doc.autoTable({ html: '#receipt' })
+//     doc.save('Receipt.pdf')
 // }
 // var doc = new jsPDF('p', 'pt');
 // var res = doc.autoTableHtmlToJson(document.getElementById('table'));
