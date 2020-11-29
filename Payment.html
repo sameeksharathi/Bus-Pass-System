@@ -26,7 +26,14 @@
                             <label for="email">Card</label>
                             <a href=""><img src="images/visa.png" style="width: 70px;" alt=""></a>
                             <a href=""><img src="images/mastercard.png" style="width: 80px;" alt=""></a>
-                            <div id="money" style="padding-left: 10px;">Rs 2000</div>
+                            <small></small>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="payment">Payment</label>
+                            <div id="payment"
+                                style="display: block; width: 100%; padding: 10px; border-radius: 5px; outline: none; border: 2px solid #f0f0f0;">
+                                Rs 2000</div>
                             <small></small>
                         </div>
 
@@ -64,7 +71,8 @@
                         <div class="button">
                             <button type="submit"><a href="Form.html"
                                     style="color: white; text-decoration: none;">Previous</a></button>
-                            <button type="submit" onclick="createPDF()">Submit</button>
+                            <button type="submit"><a href="Form.html"
+                                    style="color: white; text-decoration: none;">Submit</a></button>
                         </div>
                     </form>
                 </div>
@@ -72,6 +80,8 @@
         </div>
     </div>
 
+
+    <!-- onclick="createPDF()" -->
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
