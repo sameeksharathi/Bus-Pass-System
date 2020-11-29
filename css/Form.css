@@ -20,6 +20,7 @@
         .site-blocks-cover{
             background-repeat: no-repeat;
             background-size: cover;
+            position: absolute;
         }
 
         .container {
@@ -28,8 +29,8 @@
             width: 1000px;
             border-radius: 5px;
             overflow: hidden;
-            /* padding-top: 100px; */
-            margin-bottom: 100px;
+            margin-top: 55px;
+            margin-bottom: 60px;
             margin-left: 16%;
             border: 2px solid lightgrey;
             box-shadow: lightslategray;
