@@ -19,10 +19,10 @@ function checkInput() {
     const destinationValue = destination.value;
 
     if (nameValue === '') {
-        showError(name, "Name can not be Blank");
+        showError(name, "Please fill out this field!");
     }
     else if (!isname(nameValue)) {
-        showError(name, "Name is not valid")
+        showError(name, "Not Valid!")
     }
     else {
         showSuccess(name);
@@ -31,10 +31,10 @@ function checkInput() {
 
 
     if (emailValue === '') {
-        showError(email, "Email can not be Blank");
+        showError(email, "Please fill out this field!");
     }
     else if (!isEmailValid(emailValue)) {
-        showError(email, "Email Id is not valid")
+        showError(email, "Not Valid!")
     }
     else {
         showSuccess(email);
@@ -43,31 +43,29 @@ function checkInput() {
 
 
     if (mobValue === '') {
-        showError(mob, "Mobile Number can not be Blank");
+        showError(mob, "Please fill out this field!");
     }
     else if (!ismob(mobValue)) {
-        showError(mob, "Mobile Number is not valid")
+        showError(mob, "Not Valid!")
     }
     else {
         showSuccess(mob);
         localStorage.setItem('mobno', mob.value)
     }
 
-    if (expdateValue === '0') {
-        expdate.style.border = "2px solid red";
-        showError(expdate, "Month can not be 0");
-    }
+    // if (expdateValue === '0') {
+    //     expdate.style.border = "2px solid red";
+    //     showError(expdate, "Month can not be 0");
+    // }
 
-    else {
-        expdate.style.border = "2px solid green";
-        showSuccess(expdate);
-        localStorage.setItem('Expire', expdate.value)
-        var pay = Number(expdate.value)
-    }
+    expdate.style.border = "2px solid green";
+    showSuccess(expdate);
+    localStorage.setItem('Expire', expdate.value)
+    var pay = Number(expdate.value)
 
     if (destinationValue === 'Choose Your Destination') {
         destination.style.border = "2px solid red";
-        showError(destination, "Destination can not be Blank");
+        showError(destination, "Please fill out this field!");
     }
     else {
         destination.style.border = "2px solid green";
@@ -127,34 +125,64 @@ function ismob(mob) {
 }
 
 
-function createPDF() {
-    // if (document.getElementById("name").value == "" || document.getElementById("email").value == "") {
-    //     alert("Please enter all the fields");
-    // }
-    // else {
-    var doc = new jsPDF('l', 'mm', [610, 310]);
-    doc.setFontType('bold');
-    doc.text("Bus Pass", 90, 10);
-    doc.line(89, 12, 115, 12);
-    doc.setTextColor(0, 0, 0);
-    doc.setFontSize(15);
-    doc.setFont("times");
-    doc.setFontType('normal');
-    doc.text("Name: " + document.getElementById("name").value, 30, 30);
-    doc.text("Email: " + document.getElementById("email").value, 30, 40);
-    doc.text("Mobile Number: " + document.getElementById("mob").value, 30, 50);
-    doc.text("Valid Till: " + document.getElementById("expdate").value + " Month/Months", 30, 60);
-    doc.text("Destination: " + document.getElementById("destination").value, 30, 70);
-    doc.setTextColor(0, 0, 125);
-    doc.setFontSize(25);
-    doc.setFont("courier");
-    doc.setFontType("bold");
-    doc.text("Enjoy Your Journey", 65, 100);
+// function createPDF() {
+//     // if (document.getElementById("name").value == "" || document.getElementById("email").value == "") {
+//     //     alert("Please enter all the fields");
+//     // }
+//     // else {
+//     var doc = new jsPDF('l', 'mm', [610, 310]);
+//     doc.setFontType('bold');
+//     doc.text("Bus Pass", 90, 10);
+//     doc.line(89, 12, 115, 12);
+//     doc.setTextColor(0, 0, 0);
+//     doc.setFontSize(15);
+//     doc.setFont("times");
+//     doc.setFontType('normal');
+//     doc.text("Name: " + document.getElementById("name").value, 30, 30);
+//     doc.text("Email: " + document.getElementById("email").value, 30, 40);
+//     doc.text("Mobile Number: " + document.getElementById("mob").value, 30, 50);
+//     doc.text("Valid Till: " + document.getElementById("expdate").value + " Month/Months", 30, 60);
+//     doc.text("Destination: " + document.getElementById("destination").value, 30, 70);
+//     doc.setTextColor(0, 0, 125);
+//     doc.setFontSize(25);
+//     doc.setFont("courier");
+//     doc.setFontType("bold");
+//     doc.text("Enjoy Your Journey", 65, 100);
 
 
 
-    doc.save("output.pdf");
-    // }
+//     doc.save("output.pdf");
+//     // }
+// }
+
+
+// function submit() {
+//     document.getElementById("submit").onclick = function () {
+//         location.href = "Payment.html";
+//     }
+// }
+
+
+function isValid() {
+    var array = ['name', 'email', 'mob', 'expdate', 'destination']
+
+    for (el of array) {
+        console.log(el)
+        let formControl = el.parentNode;
+        if (formControl.className == 'form-control success') {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
 
-
+function Proceed() {
+    if (isValid) {
+        location.href = "Payment.html";
+    }
+    else {
+        location.href = "Form.html";
+    }
+}

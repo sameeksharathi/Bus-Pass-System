@@ -1,3 +1,11 @@
+// WebFont.load({
+//     google: {
+//         families: ['Poppins']
+//     }
+// });
+
+
+
 const form = document.getElementById('form');
 let name = document.getElementById('name');
 const num = document.getElementById('num');
@@ -20,10 +28,10 @@ function checkInput() {
     // const destinationValue = destination.value.trim();
 
     if (nameValue === '') {
-        showError(name, "Name can not be Blank");
+        showError(name, "Please fill out this field!");
     }
     else if (!isname(nameValue)) {
-        showError(name, "Name is not valid")
+        showError(name, "Not Valid!")
     }
     else {
         // name.innerHTML = name.value.toUpperCase();
@@ -32,10 +40,10 @@ function checkInput() {
 
 
     if (numValue === '') {
-        showError(num, "Email can not be Blank");
+        showError(num, "Please fill out this field!");
     }
     else if (!isNumValid(numValue)) {
-        showError(num, "Email Id is not valid")
+        showError(num, "Not Valid!")
     }
     else {
         showSuccess(num);
@@ -43,7 +51,7 @@ function checkInput() {
 
 
     if (expdateValue === '') {
-        showError(expdate, "Expiry Date can not be Blank");
+        showError(expdate, "Please fill out this field!");
     }
 
     else {
@@ -52,10 +60,10 @@ function checkInput() {
 
     if (cvvValue === '') {
         // cvv.style.border = "2px solid red";
-        showError(cvv, "Destination can not be Blank");
+        showError(cvv, "Please fill out this field!");
     }
-    else if (!isCvvValid(numValue)) {
-        showError(cvv, "Email Id is not valid")
+    else if (!isCvvValid(cvvValue)) {
+        showError(cvv, "Not Valid!")
     }
     else {
         // cvv.style.border = "2px solid green";
@@ -84,43 +92,26 @@ function isname(name) {
 }
 
 function isNumValid(num) {
-    return /^[4-5]\d{16}$/.test(num);
+    return /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$/.test(num);
 }
 function isCvvValid(cvv) {
-    return /^[0-9]\d{3}$/.test(cvv);
+    return /^[0-9]{3,4}$/.test(cvv);
 }
 
 
-function createPDF() {
-    // if (document.getElementById("name").value == "" || document.getElementById("email").value == "") {
-    //     alert("Please enter all the fields");
-    // }
-    // else {
-    var doc = new jsPDF('l', 'mm', [610, 310]);
-    doc.setFontType('bold');
-    doc.text("Bus Pass", 90, 10);
-    doc.line(89, 12, 115, 12);
-    doc.setTextColor(0, 0, 0);
-    doc.setFontSize(15);
-    doc.setFont("times");
-    doc.setFontType('normal');
-    doc.text("Name: " + localStorage.getItem('Name'), 30, 30);
-    doc.text("Email: " + localStorage.getItem('email'), 30, 40);
-    doc.text("Mobile Number: " + localStorage.getItem('mobno'), 30, 50);
-    doc.text("Valid Till: " + localStorage.getItem('Expire'), 30, 60);
-    doc.text("Destination: " + localStorage.getItem('Destination'), 30, 70);
-    doc.text("Payment: " + localStorage.getItem('Payment'), 30, 80);
-    doc.setTextColor(0, 0, 125);
-    doc.setFontSize(25);
-    doc.setFont("courier");
-    doc.setFontType("bold");
-    doc.text("Enjoy Your Journey", 65, 100);
-
-
-
-    doc.save("output.pdf");
-    // }
+function showError(input, msg) {
+    const formControl = input.parentNode;
+    formControl.className = 'form-control error';
+    const small = formControl.querySelector('small');
+    small.innerHTML = msg;
 }
+
+function showSuccess(input) {
+    const formControl = input.parentNode;
+    formControl.className = 'form-control success';
+}
+
+
 
 var pay = document.getElementById("payment")
 var money = localStorage.getItem('Payment')

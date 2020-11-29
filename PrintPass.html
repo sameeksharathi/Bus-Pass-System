@@ -7,64 +7,50 @@
     <title>Print Pass</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/PrintPass.css">
 </head>
 
 <body>
     <div class="container">
+        <table id="receipt">
+            <th colspan="2">Pass Receipt</th>
+            <tr>
+                <td>Name</td>
+                <td id="name"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td id="email"></td>
+            </tr>
+            <tr>
+                <td>Mobile No.</td>
+                <td id="mob"></td>
+            </tr>
+            <tr>
+                <td>Validity</td>
+                <td id="valid"></td>
+            </tr>
+            <tr>
+                <td>Destination</td>
+                <td id="destination"></td>
+            </tr>
+            <tr>
+                <td>Payment</td>
+                <td id="payment"></td>
+            </tr>
 
-        <div class="textarea" id="my-first">
+        </table>
 
+        <div class="button">
+            <button type="submit" onclick="pdf()" style=" margin-top: 50px;">Print
+                Receipt</button>
         </div>
 
     </div>
 
-
-    <script>
-        // Create a new element
-        let divElem = document.createElement('div');
-
-        // Add text to that created element
-        let val = localStorage.getItem('Payment');
-        let text;
-        if (val == null) {
-            text = document.createTextNode('This is my element. click to edit it');
-        }
-        else {
-            text = document.createTextNode(val);
-        }
-        divElem.appendChild(text);
-
-        // Give element id, style and class
-        // divElem.setAttribute('id', 'elem');
-        // divElem.setAttribute('class', 'elem');
-        // divElem.setAttribute('style', 'border:2px solid black; width: 154px; margin: 34px; padding:23px; margin-left: 500px;');
-
-        // Grab the main container
-        let container = document.querySelector('.container');
-        let first = document.getElementById('my-first');
-
-
-        // Insert the element before element with id first
-        container.insertBefore(divElem, first);
-
-        console.log(divElem, container, first)
-
-        // add event listener to the divElem
-        divElem.addEventListener('click', function () {
-            let noTextAreas = document.getElementsByClassName('textarea').length;
-            if (noTextAreas == 0) {
-                let html = elem.innerHTML;
-                divElem.innerHTML = ` <textarea class="textarea form-control" id="textarea" rows="3"> ${html}</textarea>`;
-            }
-            //listen for the blur event on textarea
-            let textarea = document.getElementById('textarea');
-            textarea.addEventListener('blur', function () {
-                elem.innerHTML = textarea.value;
-                localStorage.setItem('text', textarea.value);
-            })
-        });
-
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/index.d.ts"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="js/PrintPass.js"></script>
 </body>
 
 </html>
