@@ -5,6 +5,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    overflow-x: hidden;
+}
 
 body {
             /* background: url(https://guidetoiceland.imgix.net/469993/x/0/.jpg?auto=format%2Ccompress&fit=crop&crop=faces%2Cedges%2Ccenter&ixlib=react-8.6.4&h=610&q=35&dpr=1);

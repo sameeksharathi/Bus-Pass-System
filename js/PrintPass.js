@@ -83,7 +83,7 @@ document.getElementById('pdf').onclick = function () {
     //         doc.text("After page content", 50, height - data.settings.margin.bottom - 20);
     //     }
     // });
-    doc.save('Generated PDF.pdf');
+    doc.save('Bus Pass.pdf');
 }
 
 
