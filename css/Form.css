@@ -513,7 +513,7 @@ body {
 
     button {
         display: inline-block;
-        width: 30%;
+        /* width: 30%; */
         background-color:black;
         color: white;
         text-align: center;
