@@ -1,4 +1,4 @@
-const email = document.getElementById('email');
+const email = document.getElementById('email1');
 const password = document.getElementById('password');
 
 form.addEventListener('submit', function (e) {
@@ -10,7 +10,8 @@ function checkInput() {
     const emailValue = email.value;
     const passwordValue = password.value;
 
-    if (emailValue === localStorage.getItem('Email')) {
+
+    if (emailValue === localStorage.getItem('email')) {
         showSuccess(email);
     }
     else {
@@ -39,7 +40,8 @@ function showSuccess(input) {
 
 function validateMyForm() {
     if (!((email.parentNode.className == 'form-control success') && (password.parentNode.className == 'form-control success'))) {
-        returnToPreviousPage();
+        // returnToPreviousPage();
+        // location.href = "index.html";
         return false;
     }
     return true;

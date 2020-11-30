@@ -19,7 +19,7 @@ function checkInput() {
     const expdateValue = expdate.value;
     const destinationValue = destination.value;
     const passwordValue = password.value;
-
+    console.log(name.value);
     if (nameValue === '') {
         showError(name, "Please fill out this field!");
     }
