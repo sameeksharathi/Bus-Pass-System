@@ -1,7 +1,10 @@
 .content{
     padding:100px auto;
 }
-
+.con{
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
 
 .bus {
     /* Some layout code… */
