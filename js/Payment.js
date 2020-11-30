@@ -31,7 +31,7 @@ function checkInput() {
         showError(name, "Please fill out this field!");
     }
     else if (!isname(nameValue)) {
-        showError(name, "Not Valid!")
+        showError(name, "This contain only letters!")
     }
     else {
         // name.innerHTML = name.value.toUpperCase();
@@ -43,7 +43,7 @@ function checkInput() {
         showError(num, "Please fill out this field!");
     }
     else if (!isNumValid(numValue)) {
-        showError(num, "Not Valid!")
+        showError(num, "This contain numbers only, must starts with 4 or 5 and length should be between 13-16")
     }
     else {
         showSuccess(num);
@@ -63,7 +63,7 @@ function checkInput() {
         showError(cvv, "Please fill out this field!");
     }
     else if (!isCvvValid(cvvValue)) {
-        showError(cvv, "Not Valid!")
+        showError(cvv, "Incorrect! This should be of length 3-4 and contain numbers only.")
     }
     else {
         // cvv.style.border = "2px solid green";
