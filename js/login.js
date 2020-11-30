@@ -1,4 +1,4 @@
-const email = document.getElementById('email');
+const email = document.getElementById('email1');
 const password = document.getElementById('password');
 
 form.addEventListener('submit', function (e) {
@@ -7,10 +7,11 @@ form.addEventListener('submit', function (e) {
 })
 
 function checkInput() {
-    const emailValue = email.value.trim();
+    const emailValue = email.value;
     const passwordValue = password.value;
 
-    if (emailValue === localStorage.getItem('Email')) {
+
+    if (emailValue === localStorage.getItem('email')) {
         showSuccess(email);
     }
     else {
@@ -22,5 +23,33 @@ function checkInput() {
     }
     else {
         showError(password, "Invalid Email");
+    }
+}
+
+function showError(input, msg) {
+    const formControl = input.parentNode;
+    formControl.className = 'form-control error';
+    const small = formControl.querySelector('small');
+    small.innerHTML = msg;
+}
+
+function showSuccess(input) {
+    const formControl = input.parentNode;
+    formControl.className = 'form-control success';
+}
+
+function validateMyForm() {
+    if (!((email.parentNode.className == 'form-control success') && (password.parentNode.className == 'form-control success'))) {
+        // returnToPreviousPage();
+        // location.href = "index.html";
+        return false;
+    }
+    return true;
+}
+
+
+function Proceed() {
+    if (validateMyForm()) {
+        location.href = "PrintPass.html";
     }
 }
