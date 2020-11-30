@@ -89,7 +89,6 @@
         visibility: visible;
         color: red;
     }
-<<<<<<< HEAD
     .form-control i {
         position: absolute;
         visibility: hidden;
@@ -104,8 +103,6 @@
         visibility: hidden;
         margin-bottom:22px;
     }
-=======
->>>>>>> a88d6528193de2c4b4f565a21ed3297f6d813668
 }
 
 @media (min-width: 995px) and (max-width:1380px){
@@ -160,7 +157,6 @@
         margin-top: 20px;
         font-size: 17px;
     }
-<<<<<<< HEAD
     .form-control i {
         position: absolute;
         visibility: hidden;
@@ -174,8 +170,6 @@
         margin-top: 2px;
         visibility: hidden;
     }
-=======
->>>>>>> a88d6528193de2c4b4f565a21ed3297f6d813668
     .form-control.success input {
         border-color: green;
     }
@@ -193,16 +187,10 @@
         visibility: visible;
         color: red;
     }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a88d6528193de2c4b4f565a21ed3297f6d813668
     .form-control.error small {
         visibility: visible;
         color: red;
     }
-<<<<<<< HEAD
     .form-control i {
         position: absolute;
         visibility: hidden;
@@ -216,8 +204,6 @@
         margin-top: 2px;
         visibility: hidden;
     }
-=======
->>>>>>> a88d6528193de2c4b4f565a21ed3297f6d813668
 }
 
 @media only screen and (min-width: 768px) and (max-width: 995px){
@@ -295,7 +281,6 @@
         visibility: visible;
         color: red;
     }
-<<<<<<< HEAD
     .form-control i {
         position: absolute;
         visibility: hidden;
@@ -309,8 +294,6 @@
         margin-top: 2px;
         visibility: hidden;
     }
-=======
->>>>>>> a88d6528193de2c4b4f565a21ed3297f6d813668
 }
 
 @media only screen and (min-width: 600px) and (max-width: 768px){
@@ -388,7 +371,6 @@
         visibility: visible;
         color: red;
     }
-<<<<<<< HEAD
     .form-control i {
         position: absolute;
         visibility: hidden;
@@ -403,8 +385,6 @@
         visibility: hidden;
     }
 
-=======
->>>>>>> a88d6528193de2c4b4f565a21ed3297f6d813668
 }
 
 @media only screen and (max-width: 600px){
@@ -483,7 +463,6 @@
         visibility: visible;
         color: red;
     }
-<<<<<<< HEAD
     .form-control i {
         position: absolute;
         visibility: hidden;
@@ -497,6 +476,4 @@
         margin-top: 2px;
         visibility: hidden;
     }
-=======
->>>>>>> a88d6528193de2c4b4f565a21ed3297f6d813668
 }
