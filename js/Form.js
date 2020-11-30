@@ -2,6 +2,7 @@ const form = document.getElementById('form');
 const name = document.getElementById('name');
 const email = document.getElementById('email');
 const mob = document.getElementById('mob');
+const password = document.getElementById('password');
 const destination = document.getElementById('destination');
 const small = document.querySelector('small');
 
@@ -17,6 +18,7 @@ function checkInput() {
     const mobValue = mob.value.trim();
     const expdateValue = expdate.value;
     const destinationValue = destination.value;
+    const passwordValue = password.value;
 
     if (nameValue === '') {
         showError(name, "Please fill out this field!");
@@ -41,6 +43,13 @@ function checkInput() {
         localStorage.setItem('email', email.value)
     }
 
+    if (passwordValue === '') {
+        showError(password, "Please fill out this field!");
+    }
+    else {
+        showSuccess(password);
+        localStorage.setItem('Password', password.value);
+    }
 
     if (mobValue === '') {
         showError(mob, "Please fill out this field!");
