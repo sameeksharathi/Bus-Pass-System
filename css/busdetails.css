@@ -7,6 +7,9 @@
     margin-bottom: 40px;
     margin-left: 38%;
 }
+html, body{
+    overflow-x: hidden;
+}
 
 .bus {
     /* Some layout code… */
