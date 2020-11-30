@@ -83,27 +83,27 @@ function checkInput() {
         let dest = destination.value
         let payment;
         if (dest == "Delhi") {
-            payment = Number(150) * pay
+            payment = Number(4500) * pay
             localStorage.setItem("Payment", payment)
         }
         else if (dest == "Agra") {
-            payment = Number(100) * pay
+            payment = Number(3000) * pay
             localStorage.setItem("Payment", payment)
         }
         else if (dest == "Mathura") {
-            payment = Number(60) * pay
+            payment = Number(1800) * pay
             localStorage.setItem("Payment", payment)
         }
         else if (dest == "Vrindavan") {
-            payment = Number(40) * pay
+            payment = Number(1200) * pay
             localStorage.setItem("Payment", payment)
         }
         else if (dest == "Barsana") {
-            payment = Number(80) * pay
+            payment = Number(2400) * pay
             localStorage.setItem("Payment", payment)
         }
         else if (dest == "Chaumuhan") {
-            payment = Number(20) * pay
+            payment = Number(600) * pay
             localStorage.setItem("Payment", payment)
         }
     }
