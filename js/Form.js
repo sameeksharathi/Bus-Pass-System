@@ -62,14 +62,16 @@ function checkInput() {
         localStorage.setItem('mobno', mob.value)
     }
 
-    // if (expdateValue === '0') {
-    //     expdate.style.border = "2px solid red";
-    //     showError(expdate, "Month can not be 0");
-    // }
+    if (expdateValue === 'Select Months') {
+        expdate.style.border = "2px solid red";
+        showError(expdate, "Please fill out this field!");
+    }
+    else {
+        expdate.style.border = "2px solid green";
+        showSuccess(expdate);
+        localStorage.setItem('Expire', expdate.value)
 
-    expdate.style.border = "2px solid green";
-    showSuccess(expdate);
-    localStorage.setItem('Expire', expdate.value)
+    }
     var pay = Number(expdate.value)
 
     if (destinationValue === 'Choose Your Destination') {
@@ -176,7 +178,7 @@ function ismob(mob) {
 
 function validateMyForm() {
     if (!((name.parentNode.className == 'form-control success') && (email.parentNode.className == 'form-control success') && (mob.parentNode.className == 'form-control success') && (destination.parentNode.className == 'form-control success'))) {
-        returnToPreviousPage();
+        // returnToPreviousPage();
         return false;
     }
     return true;

@@ -22,7 +22,7 @@ function checkInput() {
         showSuccess(password);
     }
     else {
-        showError(password, "Invalid Email");
+        showError(password, "Incorrect Password");
     }
 }
 

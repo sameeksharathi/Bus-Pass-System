@@ -67,12 +67,17 @@ document.getElementById('pdf').onclick = function () {
     var res = doc.autoTableHtmlToJson(document.getElementById('table'));
     var height = doc.internal.pageSize.height;
     doc.setFontType('bold');
-    doc.text("Pass Receipt", 210, 30);
-    doc.line(210, 35, 310, 35);
+    doc.text("Pass Receipt", 250, 30);
+    doc.line(250, 35, 350, 35);
     doc.setFontType('normal');
     doc.autoTable(res.columns, res.data, {
-        startY: 50
+        // startX: 150,
+        styles: { fontSize: 11 },
+        margin: { left: 200 },
+        startY: 50,
+        theme: 'plain'
     });
+
     // doc.autoTable(res.columns, res.data, {
     //     startY: doc.autoTableEndPosY() + 50
     // });

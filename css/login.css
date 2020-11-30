@@ -66,6 +66,13 @@
         margin-top: 20px;
         font-size: 17px;
     }
+
+    .form-control {
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+        position: relative;
+    }
+
     .form-control.success input {
         border-color: green;
     }
@@ -92,16 +99,16 @@
     .form-control i {
         position: absolute;
         visibility: hidden;
-        right: 10px;
-        top: 40px;
+        right: 45px;
+        top: 43px;
     }
 
     .form-control small {
         position: absolute;
-        left: 0;
+        /* left: 0; */
         margin-top: 2px;
         visibility: hidden;
-        margin-bottom:22px;
+        /* padding-bottom:22px; */
     }
 }
 
@@ -194,15 +201,16 @@
     .form-control i {
         position: absolute;
         visibility: hidden;
-        right: 10px;
-        top: 40px;
+        right: 45px;
+        top: 43px;
     }
 
     .form-control small {
         position: absolute;
-        left: 0;
+        /* left: 0; */
         margin-top: 2px;
         visibility: hidden;
+        /* padding-bottom:22px; */
     }
 }
 
@@ -284,15 +292,16 @@
     .form-control i {
         position: absolute;
         visibility: hidden;
-        right: 10px;
-        top: 40px;
+        right: 45px;
+        top: 43px;
     }
 
     .form-control small {
         position: absolute;
-        left: 0;
+        /* left: 0; */
         margin-top: 2px;
         visibility: hidden;
+        /* padding-bottom:22px; */
     }
 }
 
@@ -374,15 +383,16 @@
     .form-control i {
         position: absolute;
         visibility: hidden;
-        right: 10px;
-        top: 40px;
+        right: 45px;
+        top: 43px;
     }
 
     .form-control small {
         position: absolute;
-        left: 0;
+        /* left: 0; */
         margin-top: 2px;
         visibility: hidden;
+        /* padding-bottom:22px; */
     }
 
 }
@@ -466,14 +476,15 @@
     .form-control i {
         position: absolute;
         visibility: hidden;
-        right: 10px;
-        top: 40px;
+        right: 45px;
+        top: 43px;
     }
 
     .form-control small {
         position: absolute;
-        left: 0;
+        /* left: 0; */
         margin-top: 2px;
         visibility: hidden;
+        /* padding-bottom:22px; */
     }
 }
