@@ -88,42 +88,66 @@ document.getElementById('pdf').onclick = function () {
 
 
 
-    // document.getElementById('button').onclick = function () {
-    //     var doc = new jsPDF('p', 'pt');
-    //     var res = doc.autoTableHtmlToJson(document.getElementById('receipt'));
-    //     var height = doc.internal.pageSize.height;
-    //     doc.text("Bus Pass", 50, 50);
-    //     // function pdf() {
-    //     //     // let doc = new jsPDF()
+// document.getElementById('button').onclick = function () {
+//     var doc = new jsPDF('p', 'pt');
+//     var res = doc.autoTableHtmlToJson(document.getElementById('receipt'));
+//     var height = doc.internal.pageSize.height;
+//     doc.text("Bus Pass", 50, 50);
+//     // function pdf() {
+//     //     // let doc = new jsPDF()
 
-    //     //     // doc.autoTable({ html: '#receipt' })
-    //     //     // doc.save('  Receipt.pdf')
+//     //     // doc.autoTable({ html: '#receipt' })
+//     //     // doc.save('  Receipt.pdf')
 
-    //     //     var doc = new jsPDF();
-    //     //     doc.autoTable({ html: '#receipt' });
-    //     //     doc.save('table.pdf');
-    //     // }
-
-
+//     //     var doc = new jsPDF();
+//     //     doc.autoTable({ html: '#receipt' });
+//     //     doc.save('table.pdf');
+//     // }
 
 
-    //     // document.getElementById('pdf').onclick = function () {
-    //     //     var doc = new jsPDF('p', 'pt');
-    //     //     var res = doc.autoTableHtmlToJson(document.getElementById('table'));
-    //     //     var height = doc.internal.pageSize.height;
-    //     //     doc.text("Generated PDF", 50, 50);
-    //     //     doc.autoTable(res.columns, res.data, {
-    //     //         startY: 200
-    //     //     });
-    //     //     doc.autoTable(res.columns, res.data, {
-    //     //         startY: doc.autoTableEndPosY() + 50
-    //     //     });
-    //     //     doc.autoTable(res.columns, res.data, {
-    //     //         startY: height,
-    //     //         afterPageContent: function (data) {
-    //     //             doc.setFontSize(20)
-    //     //             doc.text("After page content", 50, height - data.settings.margin.bottom - 20);
-    //     //         }
-    //     //     });
-    //     doc.save('BusPass.pdf');
 
+
+//     // document.getElementById('pdf').onclick = function () {
+//     //     var doc = new jsPDF('p', 'pt');
+//     //     var res = doc.autoTableHtmlToJson(document.getElementById('table'));
+//     //     var height = doc.internal.pageSize.height;
+//     //     doc.text("Generated PDF", 50, 50);
+//     //     doc.autoTable(res.columns, res.data, {
+//     //         startY: 200
+//     //     });
+//     //     doc.autoTable(res.columns, res.data, {
+//     //         startY: doc.autoTableEndPosY() + 50
+//     //     });
+//     //     doc.autoTable(res.columns, res.data, {
+//     //         startY: height,
+//     //         afterPageContent: function (data) {
+//     //             doc.setFontSize(20)
+//     //             doc.text("After page content", 50, height - data.settings.margin.bottom - 20);
+//     //         }
+//     //     });
+//     doc.save('BusPass.pdf');
+
+
+// function done() {
+//     alert("Your Pass has been Registered!");
+//     if (isConfirm) {
+//         window.location.href = "index.html";
+//     }
+// };
+
+// function done({
+//     title: 'Warning!',
+//     text: 'Invalid user or password!',
+//     type: 'warning'
+// }, function (isConfirm) {
+//     alert('ok');
+// });
+// $('.swal2-confirm').click(function () {
+//     window.location.href = 'index.html';
+// });
+
+function done() {
+    if (window.confirm("Your Pass has been Registered!")) {
+        window.location.href = "index.html";
+    }
+}

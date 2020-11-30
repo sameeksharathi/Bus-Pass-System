@@ -50,6 +50,6 @@ function validateMyForm() {
 
 function Proceed() {
     if (validateMyForm()) {
-        location.href = "PrintPass.html";
+        location.href = "EditAndPrintPass.html";
     }
 }

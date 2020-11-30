@@ -41,8 +41,8 @@ td:nth-child(2){
 
 button {
     display: inline-block;
-    right: 0;
-    width: 30%;
+    /* right: 0; */
+    width: 25%;
     background-color: rgb(57, 82, 226);
     color: white;
     text-align: center;
@@ -51,7 +51,12 @@ button {
     border-radius: 5px;
     border: none;
 }
-
+#pdf{
+    right: 0;
+}
+#edit{
+    margin-right: 4px;
+}
 .button{
     text-align: end;
 }
