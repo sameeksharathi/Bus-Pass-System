@@ -54,6 +54,9 @@ function checkInput() {
         showError(expdate, "Please fill out this field!");
     }
 
+    else if (!isExpiryValid(expdateValue)) {
+        showError(expdate, "Not Valid! Eg.02/2020");
+    }
     else {
         showSuccess(expdate);
     }
@@ -63,7 +66,7 @@ function checkInput() {
         showError(cvv, "Please fill out this field!");
     }
     else if (!isCvvValid(cvvValue)) {
-        showError(cvv, "Not Valid!")
+        showError(cvv, "Not Valid!");
     }
     else {
         // cvv.style.border = "2px solid green";
@@ -98,7 +101,9 @@ function isCvvValid(cvv) {
     return /^[0-9]{3,4}$/.test(cvv);
 }
 
-
+function isExpiryValid(exp) {
+    return /^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/.test(exp);
+}
 function showError(input, msg) {
     const formControl = input.parentNode;
     formControl.className = 'form-control error';
