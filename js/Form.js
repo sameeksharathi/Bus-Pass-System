@@ -22,7 +22,7 @@ function checkInput() {
         showError(name, "Please fill out this field!");
     }
     else if (!isname(nameValue)) {
-        showError(name, "Not Valid!")
+        showError(name, "This contain letters only.")
     }
     else {
         showSuccess(name);
@@ -34,7 +34,7 @@ function checkInput() {
         showError(email, "Please fill out this field!");
     }
     else if (!isEmailValid(emailValue)) {
-        showError(email, "Not Valid!")
+        showError(email, "Enter a valid email.")
     }
     else {
         showSuccess(email);
@@ -46,7 +46,7 @@ function checkInput() {
         showError(mob, "Please fill out this field!");
     }
     else if (!ismob(mobValue)) {
-        showError(mob, "Not Valid!")
+        showError(mob, "This contain numbers only without country code or 0.")
     }
     else {
         showSuccess(mob);
@@ -165,14 +165,11 @@ function ismob(mob) {
 
 
 
-
 function validateMyForm() {
     if (!((name.parentNode.className == 'form-control success') && (email.parentNode.className == 'form-control success') && (mob.parentNode.className == 'form-control success') && (destination.parentNode.className == 'form-control success'))) {
         returnToPreviousPage();
         return false;
     }
-
-
     return true;
 }
 

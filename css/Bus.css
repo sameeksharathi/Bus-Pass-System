@@ -309,5 +309,7 @@ i:hover{
     transition: 0.4s;
 }
 
-
+.top:hover{
+    color: white;
+}
 
