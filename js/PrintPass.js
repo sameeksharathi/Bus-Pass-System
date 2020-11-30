@@ -153,6 +153,6 @@ document.getElementById('pdf').onclick = function () {
 
 function done() {
     if (window.confirm("Your Pass has been Registered!")) {
-        window.location.href = "index.html";
+        window.location.href = "https://sameeksharathi.github.io/Full-Stack-Project/";
     }
 }
