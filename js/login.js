@@ -4,6 +4,7 @@ const password = document.getElementById('password');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     checkInput();
+    Proceed();
 })
 
 function checkInput() {
