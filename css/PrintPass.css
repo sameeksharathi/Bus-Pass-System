@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(173, 167, 167);
+    background-color: rgb(179, 172, 172);
 }
 
 .container{
@@ -7,55 +7,76 @@ body{
     width: 750px;
     margin-top: 50px;
     padding: 50px 150px;
-    border: 2px solid black;
-    box-shadow: rgba(0, 0, 0, 0.808)
+    /* border: 2px solid black; */
+    box-shadow: 2px 2px 5px #464545e3;
 }
-
+@media (max-width:772px){
+    .container{
+        padding-left: 80px;
+    }
+    td{
+        width: 400px;
+    }
+    td:first-child{
+        padding-left: 25px;
+    }
+    td:nth-child(2){
+        padding-right: 25px;
+    }
+}
 th{
-    border-bottom: 1px solid black;
-    padding-bottom: 30px;
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
     text-align: center;
     font-size: 20px;
     text-decoration: underline;
+}
+th:first-child{
+    border-right: 2px solid black;
+
 }
 td{
     width: 450px;
 }
 td:first-child{
-    width: 225px;
-    border-right: 1px solid black;
+    width: 270px;
+    border-right: 2px solid black;
     padding-top: 8px;
     padding-bottom: 8px;
-    padding-left:15px; 
-    border-bottom: 1px solid black;
+    padding-left:55px; 
+    padding-right: 25px;
+    /* border-bottom: 1px solid black; */
     /* text-align: center; */
-    border-left: 1px solid black;
+    /* border-left: 1px solid black; */
 }
 td:nth-child(2){
+    width: 200px;
     padding-top: 8px;
     padding-bottom: 8px;
-    padding-left:15px; 
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    padding-left:55px; 
+    /* border-bottom: 1px solid black; */
+    /* border-right: 1px solid black; */
 }
 
 button {
     display: inline-block;
     /* right: 0; */
-    width: 25%;
+    width: 28%;
     background-color: rgb(57, 82, 226);
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 10px 8px;
     outline: none;
     border-radius: 5px;
     border: none;
+    box-shadow: 2px 2px 5px #464545e3;
 }
 #pdf{
     right: 0;
+
 }
 #edit{
-    margin-right: 4px;
+    margin-left: 5px;
 }
 .button{
     text-align: end;
