@@ -92,6 +92,12 @@ document.getElementById('pdf').onclick = function () {
     doc.save('Bus Pass.pdf');
 }
 
+function done() {
+    if (window.confirm("Your Pass has been Registered!")) {
+        window.location.href = "https://sameeksharathi.github.io/Full-Stack-Project/";
+    }
+}
+
 
 
 // document.getElementById('button').onclick = function () {
@@ -152,8 +158,3 @@ document.getElementById('pdf').onclick = function () {
 //     window.location.href = 'index.html';
 // });
 
-function done() {
-    if (window.confirm("Your Pass has been Registered!")) {
-        window.location.href = "https://sameeksharathi.github.io/Full-Stack-Project/";
-    }
-}
