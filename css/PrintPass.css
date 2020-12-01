@@ -10,18 +10,25 @@ body{
     /* border: 2px solid black; */
     box-shadow: 2px 2px 5px #464545e3;
 }
+
 @media (max-width:772px){
     .container{
-        padding-left: 80px;
+        padding-left: 20px;
+        width: 450px;
     }
-    td{
-        width: 400px;
-    }
+    /* td{
+        width: 100px;
+    } */
     td:first-child{
-        padding-left: 25px;
+        padding-left: 3px;
+        padding-right: 5px;
     }
     td:nth-child(2){
-        padding-right: 25px;
+        padding-right: 5px;
+        padding-left: 30px;
+    }
+    #pdf{
+        width: 35%;
     }
 }
 th{
