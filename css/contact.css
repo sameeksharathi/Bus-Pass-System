@@ -9,7 +9,6 @@ html, body{
     overflow-x: hidden;
 }
 .bus {
-    /* Some layout code… */
     animation: xAxis 5s infinite ease-in;
   }
 

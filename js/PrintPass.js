@@ -65,6 +65,7 @@ else {
 document.getElementById('pdf').onclick = function () {
     var doc = new jsPDF('l', 'pt', [610, 310]);
     var res = doc.autoTableHtmlToJson(document.getElementById('table'));
+    // console.log(res)
     var height = doc.internal.pageSize.height;
     doc.setFontType('bold');
     doc.text("Pass Receipt", 250, 30);
