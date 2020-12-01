@@ -10,6 +10,7 @@ const small = document.querySelector('small');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     checkInput();
+    Proceed()
 })
 
 function checkInput() {
