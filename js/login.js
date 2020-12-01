@@ -16,14 +16,14 @@ function checkInput() {
         showSuccess(email);
     }
     else {
-        showError(email, "Invalid Email");
+        showError(email, "Invalid Email!");
     }
 
     if (passwordValue === localStorage.getItem('Password')) {
         showSuccess(password);
     }
     else {
-        showError(password, "Incorrect Password");
+        showError(password, "Incorrect Password!");
     }
 }
 
