@@ -11,6 +11,18 @@ html, body{
     overflow-x: hidden;
 }
 
+.site-blocks-cover h1{
+    font-weight: 500;
+    font-size: 80px; 
+}
+@media (max-width: 772px){
+    .site-blocks-cover h1{
+        font-weight: 400;
+        font-size: 38px; 
+    }
+}
+
+
 .bus {
     /* Some layout code… */
     animation: xAxis 5s infinite ease-in;

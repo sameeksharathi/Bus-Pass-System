@@ -1,3 +1,10 @@
+
+.site-blocks-cover h1{
+    font-weight: 500;
+    font-size: 80px; 
+}
+
+
 .content{
     padding:100px auto;
 }
@@ -10,14 +17,38 @@ html, body{
 }
 .bus {
     animation: xAxis 5s infinite ease-in;
-  }
+}
 
 @keyframes xAxis {
     100% {
       animation-timing-function: ease-in;
       transform: translateX(1450px);
     }
-  }
+}
+
+
+.content img{
+    height: 270px;
+    width: 400px;
+}
+@media (max-width: 772px){
+    .content img{
+        height: 210px;
+        width: 330px;
+    }
+    .add{
+        margin: 25px auto;
+    }
+    
+    .site-blocks-cover h1{
+        font-weight: 400;
+        font-size: 38px; 
+    }
+}
+
+.add{
+    margin: 35px auto;
+}
 
 p{
     color:gray;
