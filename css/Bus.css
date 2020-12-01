@@ -44,7 +44,7 @@ html, body{
 #custom-nav {
     /* -webkit-box-shadow: 20px 20px 20px rgba(167, 167, 167, 0.616); */
     /* -moz-box-shadow:    20px 20px 20px rgb(192, 192, 192); */
-    box-shadow:         1px 1px 2px rgb(192, 191, 191);
+    box-shadow: 1px 1px 2px rgb(192, 191, 191);
     z-index:999;
 }
 
