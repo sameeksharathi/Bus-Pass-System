@@ -164,16 +164,20 @@
         margin-top: 20px;
         font-size: 17px;
     }
+    .form-control{
+        margin-top: 32px;
+    }
     .form-control i {
-        position: absolute;
+        /* position: absolute; */
         visibility: hidden;
-        right: 10px;
-        top: 40px;
+        display: none;
+        /* right: 10px; */
+        /* top: 40px; */
     }
 
     .form-control small {
         position: absolute;
-        left: 0;
+        /* left: 0; */
         margin-top: 2px;
         visibility: hidden;
     }
@@ -197,20 +201,6 @@
     .form-control.error small {
         visibility: visible;
         color: red;
-    }
-    .form-control i {
-        position: absolute;
-        visibility: hidden;
-        right: 45px;
-        top: 43px;
-    }
-
-    .form-control small {
-        position: absolute;
-        /* left: 0; */
-        margin-top: 2px;
-        visibility: hidden;
-        /* padding-bottom:22px; */
     }
 }
 
@@ -275,12 +265,14 @@
     }
 
     .form-control.success .fa-check-circle {
-        visibility: visible;
+        /* visibility: visible; */
+        display: none;
         color: green;
     }
 
     .form-control.error .fa-exclamation-circle {
-        visibility: visible;
+        /* visibility: visible; */
+        display: none;
         color: red;
     }
 
@@ -289,11 +281,15 @@
         visibility: visible;
         color: red;
     }
+    .form-control{
+        margin-top: 32px;
+    }
     .form-control i {
-        position: absolute;
+        /* position: absolute; */
         visibility: hidden;
-        right: 45px;
-        top: 43px;
+        display: none;
+        /* right: 45px; */
+        /* top: 325px; */
     }
 
     .form-control small {
@@ -366,25 +362,30 @@
     }
 
     .form-control.success .fa-check-circle {
-        visibility: visible;
+        /* visibility: visible; */
         color: green;
+        display: none;
     }
 
     .form-control.error .fa-exclamation-circle {
-        visibility: visible;
+        /* visibility: visible; */
         color: red;
+        display: none;
     }
-
+    .form-control{
+        margin-top: 32px;
+    }
 
     .form-control.error small {
         visibility: visible;
         color: red;
     }
     .form-control i {
-        position: absolute;
+        /* position: absolute; */
         visibility: hidden;
-        right: 45px;
-        top: 43px;
+        display: none;
+        /* right: 45px; */
+        /* top: 43px; */
     }
 
     .form-control small {
@@ -437,9 +438,14 @@
         margin-bottom:22px;
     }
     label{
+        /* margin-top:50px; */
         font-size: 17px;
         margin-bottom: 30px;
     }
+    .form-control{
+        margin-top: 32px;
+    }
+
     #submit{
         background: black;
         padding: 10px;
@@ -447,7 +453,7 @@
         border-radius: 3px;
         width: 30%;
         margin-left: 31% ;
-        margin-top: 20px;
+        margin-top: 25px;
         font-size: 17px;
     }
     .form-control.success input {
@@ -459,12 +465,14 @@
     }
 
     .form-control.success .fa-check-circle {
-        visibility: visible;
+        /* visibility: visible; */
         color: green;
+        display: none;
     }
 
     .form-control.error .fa-exclamation-circle {
-        visibility: visible;
+        /* visibility: visible; */
+        display: none;
         color: red;
     }
 
@@ -474,17 +482,20 @@
         color: red;
     }
     .form-control i {
-        position: absolute;
+        /* position: absolute; */
         visibility: hidden;
-        right: 45px;
-        top: 43px;
+        display: none;
+        /* bottom: 40px; */
+        /* right: 45px; */
+        /* top: 4px; */
+        /* float: left; */
     }
-
     .form-control small {
+        /* padding-top: 5px; */
         position: absolute;
         /* left: 0; */
         margin-top: 2px;
         visibility: hidden;
-        /* padding-bottom:22px; */
+        /* margin-bottom:22px; */
     }
 }
