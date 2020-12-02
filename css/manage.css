@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html, body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 .site-blocks-cover{
     background-repeat: no-repeat;
     background-size: cover;

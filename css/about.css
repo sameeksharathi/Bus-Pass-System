@@ -13,6 +13,7 @@
 
 html, body{
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .site-blocks-cover h1{
