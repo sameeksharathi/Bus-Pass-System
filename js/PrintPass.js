@@ -68,7 +68,7 @@ document.getElementById('pdf').onclick = function () {
     // console.log(res)
     var height = doc.internal.pageSize.height;
     doc.setFontType('bold');
-    doc.text("Pass Receipt", 250, 30);
+    doc.text("Bus Pass", 250, 30);
     doc.line(250, 35, 350, 35);
     doc.setFontType('normal');
     doc.autoTable(res.columns, res.data, {
