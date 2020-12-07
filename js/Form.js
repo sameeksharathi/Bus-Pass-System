@@ -125,7 +125,7 @@ function showSuccess(input) {
 }
 
 function isEmailValid(email) {
-    return /^[a-zA-Z\-]+[a-zA-Z0-9.-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,3}$/.test(email);
+    return /^[a-zA-Z\-]+[a-zA-Z0-9.-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,3}$/.test(email) || /^[a-zA-Z\-]+.[a-zA-Z\-]+_[a-zA-Z0-9\-]+@gla.ac.in$/.test(email);
 }
 
 function isname(name) {
